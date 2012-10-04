@@ -3,6 +3,7 @@
   <!-- interface-requires gtk+ 3.0 -->
   <!-- interface-requires phillyride_window 1.0 -->
   <!-- interface-local-resource-path ../media -->
+  <object class="GtkEntryCompletion" id="entrycompletion1"/>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -261,22 +262,46 @@
           </packing>
         </child>
         <child>
-          <object class="GtkToolbar" id="toolbar1">
+          <object class="GtkBox" id="box2">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkToolButton" id="showtrain">
-                <property name="use_action_appearance">False</property>
+              <object class="GtkLabel" id="label1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">showtrain</property>
-                <property name="use_underline">True</property>
-                <property name="stock_id">gtk-sort-descending</property>
+                <property name="label" translatable="yes">Find a train by number: </property>
               </object>
               <packing>
                 <property name="expand">False</property>
-                <property name="homogeneous">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="trainnum">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="invisible_char">•</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="showtrain">
+                <property name="label" translatable="yes">Show Train</property>
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_action_appearance">False</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
               </packing>
             </child>
           </object>
@@ -309,15 +334,165 @@
                 <property name="entry_text_column">0</property>
                 <property name="id_column">1</property>
                 <items>
-                  <item translatable="yes">Trenton</item>
+                  <item translatable="yes">30th Street Station</item>
+                  <item translatable="yes">Airport Terminal A</item>
+                  <item translatable="yes">Airport Terminal B</item>
+                  <item translatable="yes">Airport Terminal C D</item>
+                  <item translatable="yes">Airport Terminal E F</item>
+                  <item translatable="yes">Allegheny</item>
+                  <item translatable="yes">Allen Lane</item>
+                  <item translatable="yes">Ambler</item>
+                  <item translatable="yes">Angora</item>
+                  <item translatable="yes">Ardmore</item>
+                  <item translatable="yes">Ardsley</item>
+                  <item translatable="yes">Bala</item>
+                  <item translatable="yes">Berwyn</item>
+                  <item translatable="yes">Bethayres</item>
+                  <item translatable="yes">Bridesburg</item>
+                  <item translatable="yes">Bristol</item>
+                  <item translatable="yes">Bryn Mawr</item>
+                  <item translatable="yes">Carpenter</item>
+                  <item translatable="yes">Chalfont</item>
+                  <item translatable="yes">Chelten Avenue</item>
+                  <item translatable="yes">Cheltenham</item>
+                  <item translatable="yes">Chester</item>
+                  <item translatable="yes">Chestnut Hill East</item>
+                  <item translatable="yes">Chestnut Hill West</item>
+                  <item translatable="yes">Churchman's Crossing</item>
+                  <item translatable="yes">Claymont</item>
+                  <item translatable="yes">Clifton-Aldan</item>
+                  <item translatable="yes">Colmar</item>
+                  <item translatable="yes">Conshohocken</item>
+                  <item translatable="yes">Cornwells Heights</item>
+                  <item translatable="yes">Crestmont</item>
+                  <item translatable="yes">Croydon</item>
+                  <item translatable="yes">Crum Lynne</item>
+                  <item translatable="yes">Curtis Park</item>
+                  <item translatable="yes">Cynwyd</item>
+                  <item translatable="yes">Darby</item>
+                  <item translatable="yes">Daylesford</item>
+                  <item translatable="yes">Delaware Valley College</item>
+                  <item translatable="yes">Devon</item>
+                  <item translatable="yes">Downingtown</item>
+                  <item translatable="yes">Doylestown</item>
+                  <item translatable="yes">East Falls</item>
+                  <item translatable="yes">Eastwick</item>
+                  <item translatable="yes">Eddington</item>
+                  <item translatable="yes">Eddystone</item>
+                  <item translatable="yes">Elkins Park</item>
+                  <item translatable="yes">Elwyn</item>
+                  <item translatable="yes">Exton</item>
+                  <item translatable="yes">Fern Rock T C</item>
+                  <item translatable="yes">Fernwood-Yeadon</item>
+                  <item translatable="yes">Folcroft</item>
+                  <item translatable="yes">Forest Hills</item>
+                  <item translatable="yes">Fortuna</item>
+                  <item translatable="yes">Fort Washington</item>
+                  <item translatable="yes">Fox Chase</item>
+                  <item translatable="yes">Germantown</item>
+                  <item translatable="yes">Gladstone</item>
+                  <item translatable="yes">Glenolden</item>
+                  <item translatable="yes">Glenside</item>
+                  <item translatable="yes">Gravers</item>
+                  <item translatable="yes">Gwynedd Valley</item>
+                  <item translatable="yes">Hatboro</item>
+                  <item translatable="yes">Haverford</item>
+                  <item translatable="yes">Highland</item>
+                  <item translatable="yes">Highland Avenue</item>
+                  <item translatable="yes">Holmesburg Jct</item>
+                  <item translatable="yes">Ivy Ridge</item>
+                  <item translatable="yes">Jenkintown Wyncote</item>
+                  <item translatable="yes">Langhorne</item>
+                  <item translatable="yes">Lansdale</item>
+                  <item translatable="yes">Lansdowne</item>
+                  <item translatable="yes">Lawndale</item>
+                  <item translatable="yes">Levittown-Tullytown</item>
+                  <item translatable="yes">Link Belt</item>
+                  <item translatable="yes">Main Street</item>
+                  <item translatable="yes">Malvern</item>
+                  <item translatable="yes">Manayunk</item>
+                  <item translatable="yes">Marcus Hook</item>
+                  <item translatable="yes">Market East</item>
+                  <item translatable="yes">Meadowbrook</item>
+                  <item translatable="yes">Media</item>
+                  <item translatable="yes">Melrose Park</item>
+                  <item translatable="yes">Merion</item>
+                  <item translatable="yes">Miquon</item>
+                  <item translatable="yes">Morton-Rutledge</item>
+                  <item translatable="yes">Mount Airy</item>
+                  <item translatable="yes">Moylan-Rose Valley</item>
+                  <item translatable="yes">Narberth</item>
+                  <item translatable="yes">Neshaminy</item>
+                  <item translatable="yes">Newark</item>
+                  <item translatable="yes">New Britain</item>
+                  <item translatable="yes">Noble</item>
+                  <item translatable="yes">Norristown</item>
+                  <item translatable="yes">Norristown T.C.</item>
+                  <item translatable="yes">North Broad</item>
+                  <item translatable="yes">North Hills</item>
+                  <item translatable="yes">North Philadelphia</item>
+                  <item translatable="yes">North Philadelphia Amtrak</item>
+                  <item translatable="yes">North Wales</item>
+                  <item translatable="yes">Norwood</item>
+                  <item translatable="yes">Olney</item>
+                  <item translatable="yes">Oreland</item>
+                  <item translatable="yes">Overbrook</item>
+                  <item translatable="yes">Paoli</item>
+                  <item translatable="yes">Penllyn</item>
+                  <item translatable="yes">Pennbrook</item>
+                  <item translatable="yes">Philmont</item>
+                  <item translatable="yes">Primos</item>
+                  <item translatable="yes">Prospect Park - Moore</item>
+                  <item translatable="yes">Queen Lane</item>
+                  <item translatable="yes">Radnor</item>
+                  <item translatable="yes">Ridley Park</item>
+                  <item translatable="yes">Rosemont</item>
+                  <item translatable="yes">Roslyn</item>
+                  <item translatable="yes">Rydal</item>
+                  <item translatable="yes">Ryers</item>
+                  <item translatable="yes">Secane</item>
+                  <item translatable="yes">Sedgwick</item>
+                  <item translatable="yes">Sharon Hill</item>
+                  <item translatable="yes">Somerton</item>
+                  <item translatable="yes">Spring Mill</item>
+                  <item translatable="yes">St. Davids</item>
+                  <item translatable="yes">Stenton</item>
+                  <item translatable="yes">St. Martins</item>
+                  <item translatable="yes">Strafford</item>
+                  <item translatable="yes">Suburban Station</item>
+                  <item translatable="yes">Swarthmore</item>
                   <item translatable="yes">Tacony</item>
+                  <item translatable="yes">Temple University</item>
+                  <item translatable="yes">Thorndale</item>
                   <item translatable="yes">Torresdale</item>
+                  <item translatable="yes">Trenton</item>
+                  <item translatable="yes">Trevose</item>
+                  <item translatable="yes">Tulpehocken</item>
+                  <item translatable="yes">University City</item>
+                  <item translatable="yes">Upsal</item>
+                  <item translatable="yes">Villanova</item>
+                  <item translatable="yes">Wallingford</item>
+                  <item translatable="yes">Warminster</item>
+                  <item translatable="yes">Washington Lane</item>
+                  <item translatable="yes">Wayne</item>
+                  <item translatable="yes">Wayne Junction</item>
+                  <item translatable="yes">West Trenton</item>
+                  <item translatable="yes">Whitford</item>
+                  <item translatable="yes">Willow Grove</item>
+                  <item translatable="yes">Wilmington</item>
+                  <item translatable="yes">Wissahickon</item>
+                  <item translatable="yes">Wister</item>
+                  <item translatable="yes">Woodbourne</item>
+                  <item translatable="yes">Wyndmoor</item>
+                  <item translatable="yes">Wynnefield Avenue</item>
+                  <item translatable="yes">Wynnewood</item>
+                  <item translatable="yes">Yardley</item>
                 </items>
               </object>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">2</property>
               </packing>
             </child>
             <child>
@@ -329,7 +504,7 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">2</property>
+                <property name="position">3</property>
               </packing>
             </child>
             <child>
@@ -339,7 +514,159 @@
                 <property name="entry_text_column">0</property>
                 <property name="id_column">1</property>
                 <items>
+                  <item translatable="yes">30th Street Station</item>
+                  <item translatable="yes">Airport Terminal A</item>
+                  <item translatable="yes">Airport Terminal B</item>
+                  <item translatable="yes">Airport Terminal C D</item>
+                  <item translatable="yes">Airport Terminal E F</item>
+                  <item translatable="yes">Allegheny</item>
+                  <item translatable="yes">Allen Lane</item>
+                  <item translatable="yes">Ambler</item>
+                  <item translatable="yes">Angora</item>
+                  <item translatable="yes">Ardmore</item>
+                  <item translatable="yes">Ardsley</item>
+                  <item translatable="yes">Bala</item>
+                  <item translatable="yes">Berwyn</item>
+                  <item translatable="yes">Bethayres</item>
+                  <item translatable="yes">Bridesburg</item>
+                  <item translatable="yes">Bristol</item>
+                  <item translatable="yes">Bryn Mawr</item>
+                  <item translatable="yes">Carpenter</item>
+                  <item translatable="yes">Chalfont</item>
+                  <item translatable="yes">Chelten Avenue</item>
+                  <item translatable="yes">Cheltenham</item>
+                  <item translatable="yes">Chester</item>
+                  <item translatable="yes">Chestnut Hill East</item>
+                  <item translatable="yes">Chestnut Hill West</item>
+                  <item translatable="yes">Churchman's Crossing</item>
+                  <item translatable="yes">Claymont</item>
+                  <item translatable="yes">Clifton-Aldan</item>
+                  <item translatable="yes">Colmar</item>
+                  <item translatable="yes">Conshohocken</item>
+                  <item translatable="yes">Cornwells Heights</item>
+                  <item translatable="yes">Crestmont</item>
+                  <item translatable="yes">Croydon</item>
+                  <item translatable="yes">Crum Lynne</item>
+                  <item translatable="yes">Curtis Park</item>
+                  <item translatable="yes">Cynwyd</item>
+                  <item translatable="yes">Darby</item>
+                  <item translatable="yes">Daylesford</item>
+                  <item translatable="yes">Delaware Valley College</item>
+                  <item translatable="yes">Devon</item>
+                  <item translatable="yes">Downingtown</item>
+                  <item translatable="yes">Doylestown</item>
+                  <item translatable="yes">East Falls</item>
+                  <item translatable="yes">Eastwick</item>
+                  <item translatable="yes">Eddington</item>
+                  <item translatable="yes">Eddystone</item>
+                  <item translatable="yes">Elkins Park</item>
+                  <item translatable="yes">Elwyn</item>
+                  <item translatable="yes">Exton</item>
+                  <item translatable="yes">Fern Rock T C</item>
+                  <item translatable="yes">Fernwood-Yeadon</item>
+                  <item translatable="yes">Folcroft</item>
+                  <item translatable="yes">Forest Hills</item>
+                  <item translatable="yes">Fortuna</item>
+                  <item translatable="yes">Fort Washington</item>
+                  <item translatable="yes">Fox Chase</item>
+                  <item translatable="yes">Germantown</item>
+                  <item translatable="yes">Gladstone</item>
+                  <item translatable="yes">Glenolden</item>
+                  <item translatable="yes">Glenside</item>
+                  <item translatable="yes">Gravers</item>
+                  <item translatable="yes">Gwynedd Valley</item>
+                  <item translatable="yes">Hatboro</item>
+                  <item translatable="yes">Haverford</item>
+                  <item translatable="yes">Highland</item>
+                  <item translatable="yes">Highland Avenue</item>
+                  <item translatable="yes">Holmesburg Jct</item>
+                  <item translatable="yes">Ivy Ridge</item>
+                  <item translatable="yes">Jenkintown Wyncote</item>
+                  <item translatable="yes">Langhorne</item>
+                  <item translatable="yes">Lansdale</item>
+                  <item translatable="yes">Lansdowne</item>
+                  <item translatable="yes">Lawndale</item>
+                  <item translatable="yes">Levittown-Tullytown</item>
+                  <item translatable="yes">Link Belt</item>
+                  <item translatable="yes">Main Street</item>
+                  <item translatable="yes">Malvern</item>
+                  <item translatable="yes">Manayunk</item>
+                  <item translatable="yes">Marcus Hook</item>
+                  <item translatable="yes">Market East</item>
+                  <item translatable="yes">Meadowbrook</item>
+                  <item translatable="yes">Media</item>
+                  <item translatable="yes">Melrose Park</item>
+                  <item translatable="yes">Merion</item>
+                  <item translatable="yes">Miquon</item>
+                  <item translatable="yes">Morton-Rutledge</item>
+                  <item translatable="yes">Mount Airy</item>
+                  <item translatable="yes">Moylan-Rose Valley</item>
+                  <item translatable="yes">Narberth</item>
+                  <item translatable="yes">Neshaminy</item>
+                  <item translatable="yes">Newark</item>
+                  <item translatable="yes">New Britain</item>
+                  <item translatable="yes">Noble</item>
+                  <item translatable="yes">Norristown</item>
+                  <item translatable="yes">Norristown T.C.</item>
+                  <item translatable="yes">North Broad</item>
+                  <item translatable="yes">North Hills</item>
+                  <item translatable="yes">North Philadelphia</item>
+                  <item translatable="yes">North Philadelphia Amtrak</item>
+                  <item translatable="yes">North Wales</item>
+                  <item translatable="yes">Norwood</item>
+                  <item translatable="yes">Olney</item>
+                  <item translatable="yes">Oreland</item>
+                  <item translatable="yes">Overbrook</item>
+                  <item translatable="yes">Paoli</item>
+                  <item translatable="yes">Penllyn</item>
+                  <item translatable="yes">Pennbrook</item>
+                  <item translatable="yes">Philmont</item>
+                  <item translatable="yes">Primos</item>
+                  <item translatable="yes">Prospect Park - Moore</item>
+                  <item translatable="yes">Queen Lane</item>
+                  <item translatable="yes">Radnor</item>
+                  <item translatable="yes">Ridley Park</item>
+                  <item translatable="yes">Rosemont</item>
+                  <item translatable="yes">Roslyn</item>
+                  <item translatable="yes">Rydal</item>
+                  <item translatable="yes">Ryers</item>
+                  <item translatable="yes">Secane</item>
+                  <item translatable="yes">Sedgwick</item>
+                  <item translatable="yes">Sharon Hill</item>
+                  <item translatable="yes">Somerton</item>
+                  <item translatable="yes">Spring Mill</item>
+                  <item translatable="yes">St. Davids</item>
+                  <item translatable="yes">Stenton</item>
+                  <item translatable="yes">St. Martins</item>
+                  <item translatable="yes">Strafford</item>
+                  <item translatable="yes">Suburban Station</item>
+                  <item translatable="yes">Swarthmore</item>
+                  <item translatable="yes">Tacony</item>
+                  <item translatable="yes">Temple University</item>
+                  <item translatable="yes">Thorndale</item>
+                  <item translatable="yes">Torresdale</item>
                   <item translatable="yes">Trenton</item>
+                  <item translatable="yes">Trevose</item>
+                  <item translatable="yes">Tulpehocken</item>
+                  <item translatable="yes">University City</item>
+                  <item translatable="yes">Upsal</item>
+                  <item translatable="yes">Villanova</item>
+                  <item translatable="yes">Wallingford</item>
+                  <item translatable="yes">Warminster</item>
+                  <item translatable="yes">Washington Lane</item>
+                  <item translatable="yes">Wayne</item>
+                  <item translatable="yes">Wayne Junction</item>
+                  <item translatable="yes">West Trenton</item>
+                  <item translatable="yes">Whitford</item>
+                  <item translatable="yes">Willow Grove</item>
+                  <item translatable="yes">Wilmington</item>
+                  <item translatable="yes">Wissahickon</item>
+                  <item translatable="yes">Wister</item>
+                  <item translatable="yes">Woodbourne</item>
+                  <item translatable="yes">Wyndmoor</item>
+                  <item translatable="yes">Wynnefield Avenue</item>
+                  <item translatable="yes">Wynnewood</item>
+                  <item translatable="yes">Yardley</item>
                 </items>
               </object>
               <packing>
@@ -361,7 +688,7 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">4</property>
+                <property name="position">5</property>
               </packing>
             </child>
           </object>

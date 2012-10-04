@@ -47,10 +47,12 @@ class PhillyrideWindow(Window):
         self.startd = self.builder.get_object("startd")
         self.endd = self.builder.get_object("endd")
         self.planbutton = self.builder.get_object("planbutton")
+        self.trainnum = self.builder.get_object("trainnum")
         
         
     def on_showtrain_clicked(self, widget):
-        trainid = "780"
+        trainid = self.trainnum.get_text()
+        
         info = urlopen("http://www3.septa.org/hackathon/RRSchedules/" + trainid)
         train = json.load(info)
         self.infodisplay.get_buffer().set_text("")  # Clears previous text
