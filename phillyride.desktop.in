@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Phillyride
+_Comment=Phillyride application
+Categories=GNOME;Utility;
+Exec=phillyride
+Icon=phillyride
+Terminal=false
+Type=Application

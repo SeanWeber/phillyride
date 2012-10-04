@@ -1,0 +1,1 @@
+Phillyride is a desktop app that gives you information on public busses and trains in the Philadelphia area. It allows you to plan your route, see delays, track busses, view traffic cameras, and more. It utilizes SEPTA's APIs to track vehicles in real time.
