@@ -15,12 +15,15 @@
 '''
 
 from urllib2 import urlopen
+import urllib
 import json
+
 import gettext
 from gettext import gettext as _
 gettext.textdomain('phillyride')
 
-from gi.repository import Gtk # pylint: disable=E0611
+from gi.repository import Gtk, Gdk # pylint: disable=E0611
+from gi.repository.GdkPixbuf import Pixbuf, PixbufLoader
 import logging
 logger = logging.getLogger('phillyride')
 
@@ -49,6 +52,8 @@ class PhillyrideWindow(Window):
         self.planbutton = self.builder.get_object("planbutton")
         self.trainnum = self.builder.get_object("trainnum")
         
+        self.camimage = self.builder.get_object("camimage")
+        self.camselect = self.builder.get_object("camselect")
         
     def on_showtrain_clicked(self, widget):
         trainid = self.trainnum.get_text()
@@ -68,8 +73,8 @@ class PhillyrideWindow(Window):
                     "\n" + "-" * 10)
 
     def on_planbutton_clicked(self, widget):
-        start = self.startd.get_active_text()
-        end = self.endd.get_active_text()
+        start = urllib.quote(self.startd.get_active_text())
+        end = urllib.quote(self.endd.get_active_text())
         
         query = "http://www3.septa.org/hackathon/NextToArrive/" + start + "/" + end
         results = urlopen(query)
@@ -94,3 +99,21 @@ class PhillyrideWindow(Window):
             self.infodisplay.get_buffer().insert(
                     self.infodisplay.get_buffer().get_end_iter(),  
                     "\n" + "-" * 10)
+    
+    def on_cambutton_clicked(self, widget):
+        currentcam = self.camselect.get_active_text()
+        
+        camsfile = open('data/media/cameras.json', 'r')       
+        camdata = json.load(camsfile)
+        
+        for item in camdata:
+            if item['name'] == currentcam:
+                camurl = item['url']
+                break
+            
+        image = urlopen(camurl)
+        loader = PixbufLoader()
+        loader.write(image.read())
+        loader.close()
+               
+        self.camimage.set_from_pixbuf(loader.get_pixbuf())

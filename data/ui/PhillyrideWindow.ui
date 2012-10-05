@@ -10,7 +10,7 @@
     <property name="stock">gtk-help</property>
   </object>
   <object class="PhillyrideWindow" id="phillyride_window">
-    <property name="width_request">500</property>
+    <property name="width_request">600</property>
     <property name="height_request">500</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Phillyride</property>
@@ -262,458 +262,827 @@
           </packing>
         </child>
         <child>
-          <object class="GtkBox" id="box2">
+          <object class="GtkNotebook" id="notebook1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can_focus">True</property>
+            <property name="tab_pos">left</property>
             <child>
-              <object class="GtkLabel" id="label1">
+              <object class="GtkBox" id="box3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Find a train by number: </property>
+                <property name="margin_left">5</property>
+                <property name="margin_right">5</property>
+                <property name="margin_top">5</property>
+                <property name="margin_bottom">5</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkBox" id="box1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkLabel" id="startlabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Start:</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="startd">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="entry_text_column">0</property>
+                        <property name="id_column">1</property>
+                        <items>
+                          <item translatable="yes">30th Street Station</item>
+                          <item translatable="yes">Airport Terminal A</item>
+                          <item translatable="yes">Airport Terminal B</item>
+                          <item translatable="yes">Airport Terminal C D</item>
+                          <item translatable="yes">Airport Terminal E F</item>
+                          <item translatable="yes">Allegheny</item>
+                          <item translatable="yes">Allen Lane</item>
+                          <item translatable="yes">Ambler</item>
+                          <item translatable="yes">Angora</item>
+                          <item translatable="yes">Ardmore</item>
+                          <item translatable="yes">Ardsley</item>
+                          <item translatable="yes">Bala</item>
+                          <item translatable="yes">Berwyn</item>
+                          <item translatable="yes">Bethayres</item>
+                          <item translatable="yes">Bridesburg</item>
+                          <item translatable="yes">Bristol</item>
+                          <item translatable="yes">Bryn Mawr</item>
+                          <item translatable="yes">Carpenter</item>
+                          <item translatable="yes">Chalfont</item>
+                          <item translatable="yes">Chelten Avenue</item>
+                          <item translatable="yes">Cheltenham</item>
+                          <item translatable="yes">Chester</item>
+                          <item translatable="yes">Chestnut Hill East</item>
+                          <item translatable="yes">Chestnut Hill West</item>
+                          <item translatable="yes">Churchman's Crossing</item>
+                          <item translatable="yes">Claymont</item>
+                          <item translatable="yes">Clifton-Aldan</item>
+                          <item translatable="yes">Colmar</item>
+                          <item translatable="yes">Conshohocken</item>
+                          <item translatable="yes">Cornwells Heights</item>
+                          <item translatable="yes">Crestmont</item>
+                          <item translatable="yes">Croydon</item>
+                          <item translatable="yes">Crum Lynne</item>
+                          <item translatable="yes">Curtis Park</item>
+                          <item translatable="yes">Cynwyd</item>
+                          <item translatable="yes">Darby</item>
+                          <item translatable="yes">Daylesford</item>
+                          <item translatable="yes">Delaware Valley College</item>
+                          <item translatable="yes">Devon</item>
+                          <item translatable="yes">Downingtown</item>
+                          <item translatable="yes">Doylestown</item>
+                          <item translatable="yes">East Falls</item>
+                          <item translatable="yes">Eastwick</item>
+                          <item translatable="yes">Eddington</item>
+                          <item translatable="yes">Eddystone</item>
+                          <item translatable="yes">Elkins Park</item>
+                          <item translatable="yes">Elwyn</item>
+                          <item translatable="yes">Exton</item>
+                          <item translatable="yes">Fern Rock T C</item>
+                          <item translatable="yes">Fernwood-Yeadon</item>
+                          <item translatable="yes">Folcroft</item>
+                          <item translatable="yes">Forest Hills</item>
+                          <item translatable="yes">Fortuna</item>
+                          <item translatable="yes">Fort Washington</item>
+                          <item translatable="yes">Fox Chase</item>
+                          <item translatable="yes">Germantown</item>
+                          <item translatable="yes">Gladstone</item>
+                          <item translatable="yes">Glenolden</item>
+                          <item translatable="yes">Glenside</item>
+                          <item translatable="yes">Gravers</item>
+                          <item translatable="yes">Gwynedd Valley</item>
+                          <item translatable="yes">Hatboro</item>
+                          <item translatable="yes">Haverford</item>
+                          <item translatable="yes">Highland</item>
+                          <item translatable="yes">Highland Avenue</item>
+                          <item translatable="yes">Holmesburg Jct</item>
+                          <item translatable="yes">Ivy Ridge</item>
+                          <item translatable="yes">Jenkintown Wyncote</item>
+                          <item translatable="yes">Langhorne</item>
+                          <item translatable="yes">Lansdale</item>
+                          <item translatable="yes">Lansdowne</item>
+                          <item translatable="yes">Lawndale</item>
+                          <item translatable="yes">Levittown-Tullytown</item>
+                          <item translatable="yes">Link Belt</item>
+                          <item translatable="yes">Main Street</item>
+                          <item translatable="yes">Malvern</item>
+                          <item translatable="yes">Manayunk</item>
+                          <item translatable="yes">Marcus Hook</item>
+                          <item translatable="yes">Market East</item>
+                          <item translatable="yes">Meadowbrook</item>
+                          <item translatable="yes">Media</item>
+                          <item translatable="yes">Melrose Park</item>
+                          <item translatable="yes">Merion</item>
+                          <item translatable="yes">Miquon</item>
+                          <item translatable="yes">Morton-Rutledge</item>
+                          <item translatable="yes">Mount Airy</item>
+                          <item translatable="yes">Moylan-Rose Valley</item>
+                          <item translatable="yes">Narberth</item>
+                          <item translatable="yes">Neshaminy</item>
+                          <item translatable="yes">Newark</item>
+                          <item translatable="yes">New Britain</item>
+                          <item translatable="yes">Noble</item>
+                          <item translatable="yes">Norristown</item>
+                          <item translatable="yes">Norristown T.C.</item>
+                          <item translatable="yes">North Broad</item>
+                          <item translatable="yes">North Hills</item>
+                          <item translatable="yes">North Philadelphia</item>
+                          <item translatable="yes">North Philadelphia Amtrak</item>
+                          <item translatable="yes">North Wales</item>
+                          <item translatable="yes">Norwood</item>
+                          <item translatable="yes">Olney</item>
+                          <item translatable="yes">Oreland</item>
+                          <item translatable="yes">Overbrook</item>
+                          <item translatable="yes">Paoli</item>
+                          <item translatable="yes">Penllyn</item>
+                          <item translatable="yes">Pennbrook</item>
+                          <item translatable="yes">Philmont</item>
+                          <item translatable="yes">Primos</item>
+                          <item translatable="yes">Prospect Park - Moore</item>
+                          <item translatable="yes">Queen Lane</item>
+                          <item translatable="yes">Radnor</item>
+                          <item translatable="yes">Ridley Park</item>
+                          <item translatable="yes">Rosemont</item>
+                          <item translatable="yes">Roslyn</item>
+                          <item translatable="yes">Rydal</item>
+                          <item translatable="yes">Ryers</item>
+                          <item translatable="yes">Secane</item>
+                          <item translatable="yes">Sedgwick</item>
+                          <item translatable="yes">Sharon Hill</item>
+                          <item translatable="yes">Somerton</item>
+                          <item translatable="yes">Spring Mill</item>
+                          <item translatable="yes">St. Davids</item>
+                          <item translatable="yes">Stenton</item>
+                          <item translatable="yes">St. Martins</item>
+                          <item translatable="yes">Strafford</item>
+                          <item translatable="yes">Suburban Station</item>
+                          <item translatable="yes">Swarthmore</item>
+                          <item translatable="yes">Tacony</item>
+                          <item translatable="yes">Temple University</item>
+                          <item translatable="yes">Thorndale</item>
+                          <item translatable="yes">Torresdale</item>
+                          <item translatable="yes">Trenton</item>
+                          <item translatable="yes">Trevose</item>
+                          <item translatable="yes">Tulpehocken</item>
+                          <item translatable="yes">University City</item>
+                          <item translatable="yes">Upsal</item>
+                          <item translatable="yes">Villanova</item>
+                          <item translatable="yes">Wallingford</item>
+                          <item translatable="yes">Warminster</item>
+                          <item translatable="yes">Washington Lane</item>
+                          <item translatable="yes">Wayne</item>
+                          <item translatable="yes">Wayne Junction</item>
+                          <item translatable="yes">West Trenton</item>
+                          <item translatable="yes">Whitford</item>
+                          <item translatable="yes">Willow Grove</item>
+                          <item translatable="yes">Wilmington</item>
+                          <item translatable="yes">Wissahickon</item>
+                          <item translatable="yes">Wister</item>
+                          <item translatable="yes">Woodbourne</item>
+                          <item translatable="yes">Wyndmoor</item>
+                          <item translatable="yes">Wynnefield Avenue</item>
+                          <item translatable="yes">Wynnewood</item>
+                          <item translatable="yes">Yardley</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="endlabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">End:</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="endd">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="entry_text_column">0</property>
+                        <property name="id_column">1</property>
+                        <items>
+                          <item translatable="yes">30th Street Station</item>
+                          <item translatable="yes">Airport Terminal A</item>
+                          <item translatable="yes">Airport Terminal B</item>
+                          <item translatable="yes">Airport Terminal C D</item>
+                          <item translatable="yes">Airport Terminal E F</item>
+                          <item translatable="yes">Allegheny</item>
+                          <item translatable="yes">Allen Lane</item>
+                          <item translatable="yes">Ambler</item>
+                          <item translatable="yes">Angora</item>
+                          <item translatable="yes">Ardmore</item>
+                          <item translatable="yes">Ardsley</item>
+                          <item translatable="yes">Bala</item>
+                          <item translatable="yes">Berwyn</item>
+                          <item translatable="yes">Bethayres</item>
+                          <item translatable="yes">Bridesburg</item>
+                          <item translatable="yes">Bristol</item>
+                          <item translatable="yes">Bryn Mawr</item>
+                          <item translatable="yes">Carpenter</item>
+                          <item translatable="yes">Chalfont</item>
+                          <item translatable="yes">Chelten Avenue</item>
+                          <item translatable="yes">Cheltenham</item>
+                          <item translatable="yes">Chester</item>
+                          <item translatable="yes">Chestnut Hill East</item>
+                          <item translatable="yes">Chestnut Hill West</item>
+                          <item translatable="yes">Churchman's Crossing</item>
+                          <item translatable="yes">Claymont</item>
+                          <item translatable="yes">Clifton-Aldan</item>
+                          <item translatable="yes">Colmar</item>
+                          <item translatable="yes">Conshohocken</item>
+                          <item translatable="yes">Cornwells Heights</item>
+                          <item translatable="yes">Crestmont</item>
+                          <item translatable="yes">Croydon</item>
+                          <item translatable="yes">Crum Lynne</item>
+                          <item translatable="yes">Curtis Park</item>
+                          <item translatable="yes">Cynwyd</item>
+                          <item translatable="yes">Darby</item>
+                          <item translatable="yes">Daylesford</item>
+                          <item translatable="yes">Delaware Valley College</item>
+                          <item translatable="yes">Devon</item>
+                          <item translatable="yes">Downingtown</item>
+                          <item translatable="yes">Doylestown</item>
+                          <item translatable="yes">East Falls</item>
+                          <item translatable="yes">Eastwick</item>
+                          <item translatable="yes">Eddington</item>
+                          <item translatable="yes">Eddystone</item>
+                          <item translatable="yes">Elkins Park</item>
+                          <item translatable="yes">Elwyn</item>
+                          <item translatable="yes">Exton</item>
+                          <item translatable="yes">Fern Rock T C</item>
+                          <item translatable="yes">Fernwood-Yeadon</item>
+                          <item translatable="yes">Folcroft</item>
+                          <item translatable="yes">Forest Hills</item>
+                          <item translatable="yes">Fortuna</item>
+                          <item translatable="yes">Fort Washington</item>
+                          <item translatable="yes">Fox Chase</item>
+                          <item translatable="yes">Germantown</item>
+                          <item translatable="yes">Gladstone</item>
+                          <item translatable="yes">Glenolden</item>
+                          <item translatable="yes">Glenside</item>
+                          <item translatable="yes">Gravers</item>
+                          <item translatable="yes">Gwynedd Valley</item>
+                          <item translatable="yes">Hatboro</item>
+                          <item translatable="yes">Haverford</item>
+                          <item translatable="yes">Highland</item>
+                          <item translatable="yes">Highland Avenue</item>
+                          <item translatable="yes">Holmesburg Jct</item>
+                          <item translatable="yes">Ivy Ridge</item>
+                          <item translatable="yes">Jenkintown Wyncote</item>
+                          <item translatable="yes">Langhorne</item>
+                          <item translatable="yes">Lansdale</item>
+                          <item translatable="yes">Lansdowne</item>
+                          <item translatable="yes">Lawndale</item>
+                          <item translatable="yes">Levittown-Tullytown</item>
+                          <item translatable="yes">Link Belt</item>
+                          <item translatable="yes">Main Street</item>
+                          <item translatable="yes">Malvern</item>
+                          <item translatable="yes">Manayunk</item>
+                          <item translatable="yes">Marcus Hook</item>
+                          <item translatable="yes">Market East</item>
+                          <item translatable="yes">Meadowbrook</item>
+                          <item translatable="yes">Media</item>
+                          <item translatable="yes">Melrose Park</item>
+                          <item translatable="yes">Merion</item>
+                          <item translatable="yes">Miquon</item>
+                          <item translatable="yes">Morton-Rutledge</item>
+                          <item translatable="yes">Mount Airy</item>
+                          <item translatable="yes">Moylan-Rose Valley</item>
+                          <item translatable="yes">Narberth</item>
+                          <item translatable="yes">Neshaminy</item>
+                          <item translatable="yes">Newark</item>
+                          <item translatable="yes">New Britain</item>
+                          <item translatable="yes">Noble</item>
+                          <item translatable="yes">Norristown</item>
+                          <item translatable="yes">Norristown T.C.</item>
+                          <item translatable="yes">North Broad</item>
+                          <item translatable="yes">North Hills</item>
+                          <item translatable="yes">North Philadelphia</item>
+                          <item translatable="yes">North Philadelphia Amtrak</item>
+                          <item translatable="yes">North Wales</item>
+                          <item translatable="yes">Norwood</item>
+                          <item translatable="yes">Olney</item>
+                          <item translatable="yes">Oreland</item>
+                          <item translatable="yes">Overbrook</item>
+                          <item translatable="yes">Paoli</item>
+                          <item translatable="yes">Penllyn</item>
+                          <item translatable="yes">Pennbrook</item>
+                          <item translatable="yes">Philmont</item>
+                          <item translatable="yes">Primos</item>
+                          <item translatable="yes">Prospect Park - Moore</item>
+                          <item translatable="yes">Queen Lane</item>
+                          <item translatable="yes">Radnor</item>
+                          <item translatable="yes">Ridley Park</item>
+                          <item translatable="yes">Rosemont</item>
+                          <item translatable="yes">Roslyn</item>
+                          <item translatable="yes">Rydal</item>
+                          <item translatable="yes">Ryers</item>
+                          <item translatable="yes">Secane</item>
+                          <item translatable="yes">Sedgwick</item>
+                          <item translatable="yes">Sharon Hill</item>
+                          <item translatable="yes">Somerton</item>
+                          <item translatable="yes">Spring Mill</item>
+                          <item translatable="yes">St. Davids</item>
+                          <item translatable="yes">Stenton</item>
+                          <item translatable="yes">St. Martins</item>
+                          <item translatable="yes">Strafford</item>
+                          <item translatable="yes">Suburban Station</item>
+                          <item translatable="yes">Swarthmore</item>
+                          <item translatable="yes">Tacony</item>
+                          <item translatable="yes">Temple University</item>
+                          <item translatable="yes">Thorndale</item>
+                          <item translatable="yes">Torresdale</item>
+                          <item translatable="yes">Trenton</item>
+                          <item translatable="yes">Trevose</item>
+                          <item translatable="yes">Tulpehocken</item>
+                          <item translatable="yes">University City</item>
+                          <item translatable="yes">Upsal</item>
+                          <item translatable="yes">Villanova</item>
+                          <item translatable="yes">Wallingford</item>
+                          <item translatable="yes">Warminster</item>
+                          <item translatable="yes">Washington Lane</item>
+                          <item translatable="yes">Wayne</item>
+                          <item translatable="yes">Wayne Junction</item>
+                          <item translatable="yes">West Trenton</item>
+                          <item translatable="yes">Whitford</item>
+                          <item translatable="yes">Willow Grove</item>
+                          <item translatable="yes">Wilmington</item>
+                          <item translatable="yes">Wissahickon</item>
+                          <item translatable="yes">Wister</item>
+                          <item translatable="yes">Woodbourne</item>
+                          <item translatable="yes">Wyndmoor</item>
+                          <item translatable="yes">Wynnefield Avenue</item>
+                          <item translatable="yes">Wynnewood</item>
+                          <item translatable="yes">Yardley</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="planbutton">
+                        <property name="label" translatable="yes">Plan Trip</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="xalign">1</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkBox" id="box2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkLabel" id="label1">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Find a train by number: </property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="trainnum">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="invisible_char">•</property>
+                        <property name="invisible_char_set">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="showtrain">
+                        <property name="label" translatable="yes">Show Train</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="use_action_appearance">False</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow" id="scrolledwindow1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="shadow_type">in</property>
+                    <child>
+                      <object class="GtkTextView" id="infodisplay">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="label3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Rail</property>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
+                <property name="tab_fill">False</property>
               </packing>
             </child>
             <child>
-              <object class="GtkEntry" id="trainnum">
+              <object class="GtkTextView" id="textview1">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="invisible_char">•</property>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
                 <property name="position">1</property>
               </packing>
             </child>
-            <child>
-              <object class="GtkButton" id="showtrain">
-                <property name="label" translatable="yes">Show Train</property>
-                <property name="use_action_appearance">False</property>
+            <child type="tab">
+              <object class="GtkLabel" id="label4">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Busses</property>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="textview3">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
                 <property name="position">2</property>
               </packing>
             </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkBox" id="box1">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <child>
-              <object class="GtkLabel" id="startlabel">
+            <child type="tab">
+              <object class="GtkLabel" id="label6">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Start:</property>
+                <property name="label" translatable="yes">Alerts</property>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkComboBoxText" id="startd">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="entry_text_column">0</property>
-                <property name="id_column">1</property>
-                <items>
-                  <item translatable="yes">30th Street Station</item>
-                  <item translatable="yes">Airport Terminal A</item>
-                  <item translatable="yes">Airport Terminal B</item>
-                  <item translatable="yes">Airport Terminal C D</item>
-                  <item translatable="yes">Airport Terminal E F</item>
-                  <item translatable="yes">Allegheny</item>
-                  <item translatable="yes">Allen Lane</item>
-                  <item translatable="yes">Ambler</item>
-                  <item translatable="yes">Angora</item>
-                  <item translatable="yes">Ardmore</item>
-                  <item translatable="yes">Ardsley</item>
-                  <item translatable="yes">Bala</item>
-                  <item translatable="yes">Berwyn</item>
-                  <item translatable="yes">Bethayres</item>
-                  <item translatable="yes">Bridesburg</item>
-                  <item translatable="yes">Bristol</item>
-                  <item translatable="yes">Bryn Mawr</item>
-                  <item translatable="yes">Carpenter</item>
-                  <item translatable="yes">Chalfont</item>
-                  <item translatable="yes">Chelten Avenue</item>
-                  <item translatable="yes">Cheltenham</item>
-                  <item translatable="yes">Chester</item>
-                  <item translatable="yes">Chestnut Hill East</item>
-                  <item translatable="yes">Chestnut Hill West</item>
-                  <item translatable="yes">Churchman's Crossing</item>
-                  <item translatable="yes">Claymont</item>
-                  <item translatable="yes">Clifton-Aldan</item>
-                  <item translatable="yes">Colmar</item>
-                  <item translatable="yes">Conshohocken</item>
-                  <item translatable="yes">Cornwells Heights</item>
-                  <item translatable="yes">Crestmont</item>
-                  <item translatable="yes">Croydon</item>
-                  <item translatable="yes">Crum Lynne</item>
-                  <item translatable="yes">Curtis Park</item>
-                  <item translatable="yes">Cynwyd</item>
-                  <item translatable="yes">Darby</item>
-                  <item translatable="yes">Daylesford</item>
-                  <item translatable="yes">Delaware Valley College</item>
-                  <item translatable="yes">Devon</item>
-                  <item translatable="yes">Downingtown</item>
-                  <item translatable="yes">Doylestown</item>
-                  <item translatable="yes">East Falls</item>
-                  <item translatable="yes">Eastwick</item>
-                  <item translatable="yes">Eddington</item>
-                  <item translatable="yes">Eddystone</item>
-                  <item translatable="yes">Elkins Park</item>
-                  <item translatable="yes">Elwyn</item>
-                  <item translatable="yes">Exton</item>
-                  <item translatable="yes">Fern Rock T C</item>
-                  <item translatable="yes">Fernwood-Yeadon</item>
-                  <item translatable="yes">Folcroft</item>
-                  <item translatable="yes">Forest Hills</item>
-                  <item translatable="yes">Fortuna</item>
-                  <item translatable="yes">Fort Washington</item>
-                  <item translatable="yes">Fox Chase</item>
-                  <item translatable="yes">Germantown</item>
-                  <item translatable="yes">Gladstone</item>
-                  <item translatable="yes">Glenolden</item>
-                  <item translatable="yes">Glenside</item>
-                  <item translatable="yes">Gravers</item>
-                  <item translatable="yes">Gwynedd Valley</item>
-                  <item translatable="yes">Hatboro</item>
-                  <item translatable="yes">Haverford</item>
-                  <item translatable="yes">Highland</item>
-                  <item translatable="yes">Highland Avenue</item>
-                  <item translatable="yes">Holmesburg Jct</item>
-                  <item translatable="yes">Ivy Ridge</item>
-                  <item translatable="yes">Jenkintown Wyncote</item>
-                  <item translatable="yes">Langhorne</item>
-                  <item translatable="yes">Lansdale</item>
-                  <item translatable="yes">Lansdowne</item>
-                  <item translatable="yes">Lawndale</item>
-                  <item translatable="yes">Levittown-Tullytown</item>
-                  <item translatable="yes">Link Belt</item>
-                  <item translatable="yes">Main Street</item>
-                  <item translatable="yes">Malvern</item>
-                  <item translatable="yes">Manayunk</item>
-                  <item translatable="yes">Marcus Hook</item>
-                  <item translatable="yes">Market East</item>
-                  <item translatable="yes">Meadowbrook</item>
-                  <item translatable="yes">Media</item>
-                  <item translatable="yes">Melrose Park</item>
-                  <item translatable="yes">Merion</item>
-                  <item translatable="yes">Miquon</item>
-                  <item translatable="yes">Morton-Rutledge</item>
-                  <item translatable="yes">Mount Airy</item>
-                  <item translatable="yes">Moylan-Rose Valley</item>
-                  <item translatable="yes">Narberth</item>
-                  <item translatable="yes">Neshaminy</item>
-                  <item translatable="yes">Newark</item>
-                  <item translatable="yes">New Britain</item>
-                  <item translatable="yes">Noble</item>
-                  <item translatable="yes">Norristown</item>
-                  <item translatable="yes">Norristown T.C.</item>
-                  <item translatable="yes">North Broad</item>
-                  <item translatable="yes">North Hills</item>
-                  <item translatable="yes">North Philadelphia</item>
-                  <item translatable="yes">North Philadelphia Amtrak</item>
-                  <item translatable="yes">North Wales</item>
-                  <item translatable="yes">Norwood</item>
-                  <item translatable="yes">Olney</item>
-                  <item translatable="yes">Oreland</item>
-                  <item translatable="yes">Overbrook</item>
-                  <item translatable="yes">Paoli</item>
-                  <item translatable="yes">Penllyn</item>
-                  <item translatable="yes">Pennbrook</item>
-                  <item translatable="yes">Philmont</item>
-                  <item translatable="yes">Primos</item>
-                  <item translatable="yes">Prospect Park - Moore</item>
-                  <item translatable="yes">Queen Lane</item>
-                  <item translatable="yes">Radnor</item>
-                  <item translatable="yes">Ridley Park</item>
-                  <item translatable="yes">Rosemont</item>
-                  <item translatable="yes">Roslyn</item>
-                  <item translatable="yes">Rydal</item>
-                  <item translatable="yes">Ryers</item>
-                  <item translatable="yes">Secane</item>
-                  <item translatable="yes">Sedgwick</item>
-                  <item translatable="yes">Sharon Hill</item>
-                  <item translatable="yes">Somerton</item>
-                  <item translatable="yes">Spring Mill</item>
-                  <item translatable="yes">St. Davids</item>
-                  <item translatable="yes">Stenton</item>
-                  <item translatable="yes">St. Martins</item>
-                  <item translatable="yes">Strafford</item>
-                  <item translatable="yes">Suburban Station</item>
-                  <item translatable="yes">Swarthmore</item>
-                  <item translatable="yes">Tacony</item>
-                  <item translatable="yes">Temple University</item>
-                  <item translatable="yes">Thorndale</item>
-                  <item translatable="yes">Torresdale</item>
-                  <item translatable="yes">Trenton</item>
-                  <item translatable="yes">Trevose</item>
-                  <item translatable="yes">Tulpehocken</item>
-                  <item translatable="yes">University City</item>
-                  <item translatable="yes">Upsal</item>
-                  <item translatable="yes">Villanova</item>
-                  <item translatable="yes">Wallingford</item>
-                  <item translatable="yes">Warminster</item>
-                  <item translatable="yes">Washington Lane</item>
-                  <item translatable="yes">Wayne</item>
-                  <item translatable="yes">Wayne Junction</item>
-                  <item translatable="yes">West Trenton</item>
-                  <item translatable="yes">Whitford</item>
-                  <item translatable="yes">Willow Grove</item>
-                  <item translatable="yes">Wilmington</item>
-                  <item translatable="yes">Wissahickon</item>
-                  <item translatable="yes">Wister</item>
-                  <item translatable="yes">Woodbourne</item>
-                  <item translatable="yes">Wyndmoor</item>
-                  <item translatable="yes">Wynnefield Avenue</item>
-                  <item translatable="yes">Wynnewood</item>
-                  <item translatable="yes">Yardley</item>
-                </items>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
                 <property name="position">2</property>
+                <property name="tab_fill">False</property>
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="endlabel">
+              <object class="GtkBox" id="box4">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">End:</property>
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkBox" id="box5">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkComboBoxText" id="camselect">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="entry_text_column">0</property>
+                        <property name="id_column">1</property>
+                        <items>
+                          <item translatable="yes">26th Street &amp; Penrose Ave</item>
+                          <item translatable="yes">26th Street to 76 WB</item>
+                          <item translatable="yes">Aramingo Ave @ Tacony St</item>
+                          <item translatable="yes">Harbison Ave @ Sanger St</item>
+                          <item translatable="yes">I-476 McDade on Ramp</item>
+                          <item translatable="yes">I-476 NB Access Rd BRDG</item>
+                          <item translatable="yes">I-476 NB Blue Rt</item>
+                          <item translatable="yes">I-476 NB-Blue Rt</item>
+                          <item translatable="yes">I-476 NB @ I-76\/Exit 16B</item>
+                          <item translatable="yes">I-476 NB- Lawrence Rd</item>
+                          <item translatable="yes">I-476 NB N of Beatty Rd</item>
+                          <item translatable="yes">I-476 NB N of Bullend Ln</item>
+                          <item translatable="yes">I-476 NB N of Ridge PK</item>
+                          <item translatable="yes">I-476 NB N of West Chester Pike</item>
+                          <item translatable="yes">I-476 NB-North of US 1</item>
+                          <item translatable="yes">I-476 NB-Reed Rd</item>
+                          <item translatable="yes">I-476 NB S of Darby Rd</item>
+                          <item translatable="yes">I-476 NB S of Plush Mill Rd</item>
+                          <item translatable="yes">I-476 Ramp from Germantown Pike</item>
+                          <item translatable="yes">I-476 SB @Balt Pike</item>
+                          <item translatable="yes">I-476 SB@Clyde Rd</item>
+                          <item translatable="yes">I-476 SB CNTY Ln</item>
+                          <item translatable="yes">I-476 SB @ Conestoge Rd</item>
+                          <item translatable="yes">I-476 SB @ Mcdade Blvd\/Exit 1</item>
+                          <item translatable="yes">I-476 SB N of PA320</item>
+                          <item translatable="yes">I-476 SB No of Cnty LN</item>
+                          <item translatable="yes">I-476 SB @ Ridge Pike</item>
+                          <item translatable="yes">I-476 SB SCHKL R BRDG</item>
+                          <item translatable="yes">I-476 SB@SEPTA Overpass</item>
+                          <item translatable="yes">I-476 SB S of Bryn Mawr Ave</item>
+                          <item translatable="yes">I-476 SB S of Marple Rd</item>
+                          <item translatable="yes">I-476 SB S of Ridge PK</item>
+                          <item translatable="yes">I-476 SB S of West Chester Pike</item>
+                          <item translatable="yes">I-476 SB @ US1</item>
+                          <item translatable="yes">I-476 SB-US 30 RMP</item>
+                          <item translatable="yes">I-476-US 30\/Exit #13</item>
+                          <item translatable="yes">I-676EB 676@16th St</item>
+                          <item translatable="yes">I-676EB 676@3rd St</item>
+                          <item translatable="yes">I-676EB 676@8th St</item>
+                          <item translatable="yes">I-676EB 676@Ben Franklin Pkwy</item>
+                          <item translatable="yes">I-676WB 676@11th St</item>
+                          <item translatable="yes">I-676WB 676@18th St</item>
+                          <item translatable="yes">I-676WB 676@20th St</item>
+                          <item translatable="yes">I-676WB 676@24th St</item>
+                          <item translatable="yes">I-676WB 676@Broad St</item>
+                          <item translatable="yes">I-76 EB @ Belmont</item>
+                          <item translatable="yes">I-76 EB @ City Ave</item>
+                          <item translatable="yes">I-76 EB East of Grays Ferry</item>
+                          <item translatable="yes">I-76 EB East of Montgomery</item>
+                          <item translatable="yes">I-76 EB East of South Street</item>
+                          <item translatable="yes">I-76 EB East of Waverly</item>
+                          <item translatable="yes">I-76 EB @ Girard</item>
+                          <item translatable="yes">I-76 EB @ Gulph Mills</item>
+                          <item translatable="yes">I-76 EB @ I-676</item>
+                          <item translatable="yes">I-76 EB@MM 332.6</item>
+                          <item translatable="yes">I-76 EB @ Montgomery</item>
+                          <item translatable="yes">I-76 EB Ramp to Passyunk Ave</item>
+                          <item translatable="yes">I-76 EB Ramp to US1 N</item>
+                          <item translatable="yes">I-76 EB Ramp to US 202\/422</item>
+                          <item translatable="yes">I-76 EB to 26th Street</item>
+                          <item translatable="yes">I-76 EB @ University Ave</item>
+                          <item translatable="yes">I-76 EB @ US1</item>
+                          <item translatable="yes">I-76 EB @ Vare Ave</item>
+                          <item translatable="yes">I-76 EB Weadley Rd</item>
+                          <item translatable="yes">I-76 EB West of Girard</item>
+                          <item translatable="yes">I-76 EB West of Gladwyne</item>
+                          <item translatable="yes">I-76 EB West of Spring Garden</item>
+                          <item translatable="yes">I-76 EB West of Waverly</item>
+                          <item translatable="yes">I-76 EB W of Croton</item>
+                          <item translatable="yes">I-76 EB W of Matsnfrd</item>
+                          <item translatable="yes">I-76 WB @ 30th St</item>
+                          <item translatable="yes">I-76 WB @ City Ave</item>
+                          <item translatable="yes">I-76 WB Consh Crve</item>
+                          <item translatable="yes">I-76 WB @ Conshohocken Curve</item>
+                          <item translatable="yes">I-76 WB East of Belmont</item>
+                          <item translatable="yes">I-76 WB East of Girard</item>
+                          <item translatable="yes">I-76 WB East of Gladwyne</item>
+                          <item translatable="yes">I-76 WB East of I-676</item>
+                          <item translatable="yes">I-76 WB @ I476 Interchange</item>
+                          <item translatable="yes">I-76 WB @ MM</item>
+                          <item translatable="yes">I-76 WB @ MM 332</item>
+                          <item translatable="yes">I-76 WB Spring Garden</item>
+                          <item translatable="yes">I-76 WB West of Belmont</item>
+                          <item translatable="yes">I-76 WB West of Gladwyne</item>
+                          <item translatable="yes">I-76 WB West of Montgomery Dr</item>
+                          <item translatable="yes">I-76 WB West of South Street</item>
+                          <item translatable="yes">I-76 WB W of Gypsy Rd</item>
+                          <item translatable="yes">I-95- 895 Tennis Ave</item>
+                          <item translatable="yes">I-95 NB-95 Castor Ave</item>
+                          <item translatable="yes">I-95 NB-95 Convent Av</item>
+                          <item translatable="yes">I-95 NB-95 Indiana St</item>
+                          <item translatable="yes">I-95 NB-95 N of COTMN</item>
+                          <item translatable="yes">I-95 NB 95@Race St.</item>
+                          <item translatable="yes">I-95 NB-95 S of Amtrak</item>
+                          <item translatable="yes">I-95 NB-95 Station Av</item>
+                          <item translatable="yes">I-95 NB-95 Vankirk</item>
+                          <item translatable="yes">I-95 NB 95@Vine Exp\/BF Bridge</item>
+                          <item translatable="yes">I-95 NB Ramp to I-476 North</item>
+                          <item translatable="yes">I-95 NB-Ramp to PA 63</item>
+                          <item translatable="yes">I-95 NB \/WWB Packer</item>
+                          <item translatable="yes">I-95 SB-95 Academy Rd</item>
+                          <item translatable="yes">I-95 SB-95 Betsy Ross</item>
+                          <item translatable="yes">I-95 SB-95 Disston St</item>
+                          <item translatable="yes">I-95 SB-95 Mil Rd</item>
+                          <item translatable="yes">I-95 SB-95 Penny Pack</item>
+                          <item translatable="yes">I-95 SB-95 Wakelng St</item>
+                          <item translatable="yes">I-95 SB- 95 Woodhaven</item>
+                          <item translatable="yes">I-95 SB-Aramingo\/Gir</item>
+                          <item translatable="yes">I-95 SB-Broad St.</item>
+                          <item translatable="yes">I-95 SB-EnterPR\/Bart</item>
+                          <item translatable="yes">I-95 SB-Girard Ave</item>
+                          <item translatable="yes">I-95 SB Island Airport</item>
+                          <item translatable="yes">I-95 SB-Packer\/Front</item>
+                          <item translatable="yes">I-95 SB-Tasker\/Reed</item>
+                          <item translatable="yes">I-95 SB @Vine\/Callowhill</item>
+                          <item translatable="yes">I-95 Wash\/Columbus</item>
+                          <item translatable="yes">PA 100 NB BEF Kirkland</item>
+                          <item translatable="yes">PA 100 NB BEF MTN View</item>
+                          <item translatable="yes">PA 100 NB BEF SHIP RD</item>
+                          <item translatable="yes">PA 100 NB @PA Turnpike</item>
+                          <item translatable="yes">PA 100 NB @ Phoenixville</item>
+                          <item translatable="yes">PA 100 NB @ SR3070</item>
+                          <item translatable="yes">PA 100 NB @Sunrise BLVD</item>
+                          <item translatable="yes">PA 100 NB @Worthington</item>
+                          <item translatable="yes">PA 100 SB AFT BOOT RD</item>
+                          <item translatable="yes">PA 100 SB AFT PA 113</item>
+                          <item translatable="yes">PA 100 SB AFT Pottstown</item>
+                          <item translatable="yes">PA 291 WB E of I-76</item>
+                          <item translatable="yes">PA 309 NB @ Beth PK Mrg</item>
+                          <item translatable="yes">PA 309 NB @PA Turnpike</item>
+                          <item translatable="yes">PA 309 NB S of Papermill Rd</item>
+                          <item translatable="yes">PA 309 NB @Susquehanna</item>
+                          <item translatable="yes">PA 309 NB @ Waverly Rd</item>
+                          <item translatable="yes">PA 309 SB @ Easton Rd</item>
+                          <item translatable="yes">PA 309 SB @ Papermill Rd</item>
+                          <item translatable="yes">RT23 EB @ Fayette St</item>
+                          <item translatable="yes">RT23 WB @ City Line Ave</item>
+                          <item translatable="yes">RT23 WB @ Hollow Rd</item>
+                          <item translatable="yes">RT309 NB @ Five Points</item>
+                          <item translatable="yes">RT309 NB N of Turnpike</item>
+                          <item translatable="yes">RT309 NB @ Stump Rd</item>
+                          <item translatable="yes">RT309 NB @ US 202</item>
+                          <item translatable="yes">RT309 SB @ Church Rd</item>
+                          <item translatable="yes">RT309 SB @ English Village</item>
+                          <item translatable="yes">RT309 SB N of Hartman Rd</item>
+                          <item translatable="yes">RT309 SB @ North Wales Rd</item>
+                          <item translatable="yes">RT309 SB S of Turnpike</item>
+                          <item translatable="yes">State Rd @ Cottman Ave</item>
+                          <item translatable="yes">State Rd @ Princeton Ave</item>
+                          <item translatable="yes">Torresdale @ Ashburner St</item>
+                          <item translatable="yes">Torresdale @ Cottman Ave</item>
+                          <item translatable="yes">Torresdale @ Harbison Ave</item>
+                          <item translatable="yes">Torresdale @ Levick St</item>
+                          <item translatable="yes">Torresdale @ Linden St</item>
+                          <item translatable="yes">Torresdale @ Princeton Ave</item>
+                          <item translatable="yes">Torresdale @ Rhawn St</item>
+                          <item translatable="yes">Torresdale @ Robbins Ave</item>
+                          <item translatable="yes">US 1 @ 9th Street</item>
+                          <item translatable="yes">US 1 NB @ 17th Street</item>
+                          <item translatable="yes">US 1 NB @ Roberts\/Berkley</item>
+                          <item translatable="yes">US 1 NB South of Henry</item>
+                          <item translatable="yes">US 1 SB @ Broad Street</item>
+                          <item translatable="yes">US 1 SB @ Fox Street</item>
+                          <item translatable="yes">US 1 SB @ Wissahickon</item>
+                          <item translatable="yes">US 202 @ Allendale</item>
+                          <item translatable="yes">US 202 NB @ Boot Rd</item>
+                          <item translatable="yes">US 202 NB @ Morstein Rd</item>
+                          <item translatable="yes">US 202 NB N of Chesterbrk</item>
+                          <item translatable="yes">US 202 NB N of Mill Lane</item>
+                          <item translatable="yes">US 202 NB N of N Valley</item>
+                          <item translatable="yes">US 202 NB N of Skiles Blvd</item>
+                          <item translatable="yes">US 202 NB N of Westtn R</item>
+                          <item translatable="yes">US 202 NB N or Paoli</item>
+                          <item translatable="yes">US 202 NB@PA 322</item>
+                          <item translatable="yes">US 202 NB S of Bolmar S</item>
+                          <item translatable="yes">US 202 NB S of PA 401</item>
+                          <item translatable="yes">US 202 NB US 202\/I\/76</item>
+                          <item translatable="yes">US 202 NB @ W Chester P</item>
+                          <item translatable="yes">US 202 NB @ W Valley Rd</item>
+                          <item translatable="yes">US 202 N of US 252</item>
+                          <item translatable="yes">US 202 Ramp L @ 76</item>
+                          <item translatable="yes">US 202 Ramp L @ Cont BL</item>
+                          <item translatable="yes">US 202 Ramp L @ Ramp O</item>
+                          <item translatable="yes">US 202 SB @ Church Rd</item>
+                          <item translatable="yes">US 202 SB @ Howelvl Rd</item>
+                          <item translatable="yes">US 202 SB N of Cedar Hollow Rd</item>
+                          <item translatable="yes">US 202 SB @ PA 100</item>
+                          <item translatable="yes">US 202 SB @ PA 29</item>
+                          <item translatable="yes">US 202 SB @ PA 322</item>
+                          <item translatable="yes">US 202 SB @ PA 926</item>
+                          <item translatable="yes">US 202 SB S of Green Tr Dr</item>
+                          <item translatable="yes">US 202 SB S of King Rd</item>
+                          <item translatable="yes">US 202 SB @ US1</item>
+                          <item translatable="yes">US 202 SB US 202\/PA 422</item>
+                          <item translatable="yes">US 202 SB @ US 252</item>
+                          <item translatable="yes">US 202 SB @ US 30</item>
+                          <item translatable="yes">US 202 SB@Watkins</item>
+                          <item translatable="yes">US 202 @ Town CTR RD</item>
+                          <item translatable="yes">US 30 EB after PA 340</item>
+                          <item translatable="yes">US 30 EB before PA 100</item>
+                          <item translatable="yes">US 30 EB @ PA 100</item>
+                          <item translatable="yes">US 30 WB before PA 113</item>
+                          <item translatable="yes">US 30 WB before PA 282</item>
+                          <item translatable="yes">US 30 WB@BUS 230 Ramp</item>
+                          <item translatable="yes">US 30 WB @ PA 322</item>
+                          <item translatable="yes">US 422 EB-422 Indn Head</item>
+                          <item translatable="yes">US 422 EB-422 @ PA Turnpike</item>
+                          <item translatable="yes">US 422 EB- 422 PWLNGS RD</item>
+                          <item translatable="yes">US 422 EB- 422 W of Perk</item>
+                          <item translatable="yes">US 422 WB-422 Cider Mil</item>
+                          <item translatable="yes">US 422 WB-422 Egypt Rd</item>
+                          <item translatable="yes">US 422 WB-422 E of PA 29</item>
+                          <item translatable="yes">US 422 WB-422@PA 23</item>
+                          <item translatable="yes">US 422 WB-422 @ PA 363</item>
+                          <item translatable="yes">US 422 WB-422 W of PA 363</item>
+                          <item translatable="yes">US 63 WB @ Millbrk Rd</item>
+                          <item translatable="yes">WB Platt Bridge</item>
+                          <item translatable="yes">WB Platt Bridge Midspan</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="cambutton">
+                        <property name="label" translatable="yes">View</property>
+                        <property name="use_action_appearance">False</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="use_action_appearance">False</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage" id="camimage">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="stock">gtk-discard</property>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
                 <property name="position">3</property>
               </packing>
             </child>
-            <child>
-              <object class="GtkComboBoxText" id="endd">
+            <child type="tab">
+              <object class="GtkLabel" id="label5">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="entry_text_column">0</property>
-                <property name="id_column">1</property>
-                <items>
-                  <item translatable="yes">30th Street Station</item>
-                  <item translatable="yes">Airport Terminal A</item>
-                  <item translatable="yes">Airport Terminal B</item>
-                  <item translatable="yes">Airport Terminal C D</item>
-                  <item translatable="yes">Airport Terminal E F</item>
-                  <item translatable="yes">Allegheny</item>
-                  <item translatable="yes">Allen Lane</item>
-                  <item translatable="yes">Ambler</item>
-                  <item translatable="yes">Angora</item>
-                  <item translatable="yes">Ardmore</item>
-                  <item translatable="yes">Ardsley</item>
-                  <item translatable="yes">Bala</item>
-                  <item translatable="yes">Berwyn</item>
-                  <item translatable="yes">Bethayres</item>
-                  <item translatable="yes">Bridesburg</item>
-                  <item translatable="yes">Bristol</item>
-                  <item translatable="yes">Bryn Mawr</item>
-                  <item translatable="yes">Carpenter</item>
-                  <item translatable="yes">Chalfont</item>
-                  <item translatable="yes">Chelten Avenue</item>
-                  <item translatable="yes">Cheltenham</item>
-                  <item translatable="yes">Chester</item>
-                  <item translatable="yes">Chestnut Hill East</item>
-                  <item translatable="yes">Chestnut Hill West</item>
-                  <item translatable="yes">Churchman's Crossing</item>
-                  <item translatable="yes">Claymont</item>
-                  <item translatable="yes">Clifton-Aldan</item>
-                  <item translatable="yes">Colmar</item>
-                  <item translatable="yes">Conshohocken</item>
-                  <item translatable="yes">Cornwells Heights</item>
-                  <item translatable="yes">Crestmont</item>
-                  <item translatable="yes">Croydon</item>
-                  <item translatable="yes">Crum Lynne</item>
-                  <item translatable="yes">Curtis Park</item>
-                  <item translatable="yes">Cynwyd</item>
-                  <item translatable="yes">Darby</item>
-                  <item translatable="yes">Daylesford</item>
-                  <item translatable="yes">Delaware Valley College</item>
-                  <item translatable="yes">Devon</item>
-                  <item translatable="yes">Downingtown</item>
-                  <item translatable="yes">Doylestown</item>
-                  <item translatable="yes">East Falls</item>
-                  <item translatable="yes">Eastwick</item>
-                  <item translatable="yes">Eddington</item>
-                  <item translatable="yes">Eddystone</item>
-                  <item translatable="yes">Elkins Park</item>
-                  <item translatable="yes">Elwyn</item>
-                  <item translatable="yes">Exton</item>
-                  <item translatable="yes">Fern Rock T C</item>
-                  <item translatable="yes">Fernwood-Yeadon</item>
-                  <item translatable="yes">Folcroft</item>
-                  <item translatable="yes">Forest Hills</item>
-                  <item translatable="yes">Fortuna</item>
-                  <item translatable="yes">Fort Washington</item>
-                  <item translatable="yes">Fox Chase</item>
-                  <item translatable="yes">Germantown</item>
-                  <item translatable="yes">Gladstone</item>
-                  <item translatable="yes">Glenolden</item>
-                  <item translatable="yes">Glenside</item>
-                  <item translatable="yes">Gravers</item>
-                  <item translatable="yes">Gwynedd Valley</item>
-                  <item translatable="yes">Hatboro</item>
-                  <item translatable="yes">Haverford</item>
-                  <item translatable="yes">Highland</item>
-                  <item translatable="yes">Highland Avenue</item>
-                  <item translatable="yes">Holmesburg Jct</item>
-                  <item translatable="yes">Ivy Ridge</item>
-                  <item translatable="yes">Jenkintown Wyncote</item>
-                  <item translatable="yes">Langhorne</item>
-                  <item translatable="yes">Lansdale</item>
-                  <item translatable="yes">Lansdowne</item>
-                  <item translatable="yes">Lawndale</item>
-                  <item translatable="yes">Levittown-Tullytown</item>
-                  <item translatable="yes">Link Belt</item>
-                  <item translatable="yes">Main Street</item>
-                  <item translatable="yes">Malvern</item>
-                  <item translatable="yes">Manayunk</item>
-                  <item translatable="yes">Marcus Hook</item>
-                  <item translatable="yes">Market East</item>
-                  <item translatable="yes">Meadowbrook</item>
-                  <item translatable="yes">Media</item>
-                  <item translatable="yes">Melrose Park</item>
-                  <item translatable="yes">Merion</item>
-                  <item translatable="yes">Miquon</item>
-                  <item translatable="yes">Morton-Rutledge</item>
-                  <item translatable="yes">Mount Airy</item>
-                  <item translatable="yes">Moylan-Rose Valley</item>
-                  <item translatable="yes">Narberth</item>
-                  <item translatable="yes">Neshaminy</item>
-                  <item translatable="yes">Newark</item>
-                  <item translatable="yes">New Britain</item>
-                  <item translatable="yes">Noble</item>
-                  <item translatable="yes">Norristown</item>
-                  <item translatable="yes">Norristown T.C.</item>
-                  <item translatable="yes">North Broad</item>
-                  <item translatable="yes">North Hills</item>
-                  <item translatable="yes">North Philadelphia</item>
-                  <item translatable="yes">North Philadelphia Amtrak</item>
-                  <item translatable="yes">North Wales</item>
-                  <item translatable="yes">Norwood</item>
-                  <item translatable="yes">Olney</item>
-                  <item translatable="yes">Oreland</item>
-                  <item translatable="yes">Overbrook</item>
-                  <item translatable="yes">Paoli</item>
-                  <item translatable="yes">Penllyn</item>
-                  <item translatable="yes">Pennbrook</item>
-                  <item translatable="yes">Philmont</item>
-                  <item translatable="yes">Primos</item>
-                  <item translatable="yes">Prospect Park - Moore</item>
-                  <item translatable="yes">Queen Lane</item>
-                  <item translatable="yes">Radnor</item>
-                  <item translatable="yes">Ridley Park</item>
-                  <item translatable="yes">Rosemont</item>
-                  <item translatable="yes">Roslyn</item>
-                  <item translatable="yes">Rydal</item>
-                  <item translatable="yes">Ryers</item>
-                  <item translatable="yes">Secane</item>
-                  <item translatable="yes">Sedgwick</item>
-                  <item translatable="yes">Sharon Hill</item>
-                  <item translatable="yes">Somerton</item>
-                  <item translatable="yes">Spring Mill</item>
-                  <item translatable="yes">St. Davids</item>
-                  <item translatable="yes">Stenton</item>
-                  <item translatable="yes">St. Martins</item>
-                  <item translatable="yes">Strafford</item>
-                  <item translatable="yes">Suburban Station</item>
-                  <item translatable="yes">Swarthmore</item>
-                  <item translatable="yes">Tacony</item>
-                  <item translatable="yes">Temple University</item>
-                  <item translatable="yes">Thorndale</item>
-                  <item translatable="yes">Torresdale</item>
-                  <item translatable="yes">Trenton</item>
-                  <item translatable="yes">Trevose</item>
-                  <item translatable="yes">Tulpehocken</item>
-                  <item translatable="yes">University City</item>
-                  <item translatable="yes">Upsal</item>
-                  <item translatable="yes">Villanova</item>
-                  <item translatable="yes">Wallingford</item>
-                  <item translatable="yes">Warminster</item>
-                  <item translatable="yes">Washington Lane</item>
-                  <item translatable="yes">Wayne</item>
-                  <item translatable="yes">Wayne Junction</item>
-                  <item translatable="yes">West Trenton</item>
-                  <item translatable="yes">Whitford</item>
-                  <item translatable="yes">Willow Grove</item>
-                  <item translatable="yes">Wilmington</item>
-                  <item translatable="yes">Wissahickon</item>
-                  <item translatable="yes">Wister</item>
-                  <item translatable="yes">Woodbourne</item>
-                  <item translatable="yes">Wyndmoor</item>
-                  <item translatable="yes">Wynnefield Avenue</item>
-                  <item translatable="yes">Wynnewood</item>
-                  <item translatable="yes">Yardley</item>
-                </items>
+                <property name="margin_left">5</property>
+                <property name="margin_right">5</property>
+                <property name="margin_top">5</property>
+                <property name="label" translatable="yes">Cameras</property>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
                 <property name="position">3</property>
+                <property name="tab_fill">False</property>
               </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="planbutton">
-                <property name="label" translatable="yes">Plan Trip</property>
-                <property name="use_action_appearance">False</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_action_appearance">False</property>
-                <property name="xalign">1</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">5</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">3</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkScrolledWindow" id="scrolledwindow1">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="shadow_type">in</property>
-            <child>
-              <object class="GtkTextView" id="infodisplay">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
             </child>
           </object>
           <packing>
             <property name="expand">True</property>
             <property name="fill">True</property>
-            <property name="position">4</property>
+            <property name="position">5</property>
           </packing>
         </child>
       </object>
